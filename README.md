@@ -82,11 +82,11 @@ and Prometheus/Grafana monitoring.
 > ```md
 ## Screenshots
 ### Landing Page
->![Landing Page](docs/landing.png)
+>![Landing_Page](docs/landing_page.png)
 ### Dashboard
 >![Dashboard](docs/dashboard.png)
 ### My URLs
->![My URLs](docs/my-urls.png)
+>![My URLs](docs/my-url.png)
 ### Analytics
 >![Analytics](docs/analytics.png)
 ### Profile
