@@ -80,9 +80,17 @@ and Prometheus/Grafana monitoring.
 > The UI covers a landing page, register/login, a "my URLs" dashboard, and a per-link analytics view with charts. Add real screenshots or a short GIF here once you run the app locally — this section is deliberately left as a template:
 >
 > ```md
-> ![Landing page](docs/screenshots/landing.png)
-> ![Dashboard](docs/screenshots/dashboard.png)
-> ![Analytics](docs/screenshots/analytics.png)
+## Screenshots
+### Landing Page
+>![Landing Page](docs/landing.png)
+### Dashboard
+>![Dashboard](docs/dashboard.png)
+### My URLs
+>![My URLs](docs/my-urls.png)
+### Analytics
+>![Analytics](docs/analytics.png)
+### Profile
+>![Profile](docs/profile.png)
 > ```
 >
 > Easiest way to capture them: run `docker compose up` + `cd frontend && npm run dev`, click through the app in your browser, and save screenshots (or a screen recording converted to GIF, e.g. with [Gifski](https://gif.ski/) or `ffmpeg`) into `docs/screenshots/`.
