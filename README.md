@@ -2,7 +2,12 @@
 
 A production-style, full-stack URL shortener with user accounts, click analytics, caching, async event processing, and monitoring — built with **Spring Boot 3 / Java 21** on the backend and **React + TypeScript (Vite)** on the frontend.
 
-This isn't a toy "generate a random string" project — it's built the way a real short-link service would be: JWT auth, Redis-cached redirects, Kafka-driven analytics, rate limiting, scheduled cleanup of expired links, and Prometheus/Grafana observability, all containerized with Docker Compose.
+# 🔗 Link Compressor
+
+A production-oriented full-stack URL shortening platform built with
+Spring Boot and React, featuring JWT authentication, Redis caching,
+Kafka-based asynchronous analytics, URL expiration, rate limiting,
+and Prometheus/Grafana monitoring.
 
 <p align="left">
   <img alt="Java" src="https://img.shields.io/badge/Java-21-b07219?logo=openjdk&logoColor=white">
@@ -44,7 +49,7 @@ This isn't a toy "generate a random string" project — it's built the way a rea
 
 - **Account-based short links** — register/login with JWT auth; every link is tied to an owner.
 - **Fast redirects** — short codes resolve through a Redis cache before hitting Postgres.
-- **Click analytics** — every redirect emits a Kafka event, consumed asynchronously and stored per-URL (device, browser, referrer, geo, timestamp via [yauaa](https://github.com/nielsbasjes/yauaa) user-agent parsing) without slowing the redirect path down.
+- **Click analytics** — every redirect emits a Kafka event, consumed asynchronously and stored per-URL (device, browser, referrer, timestamp via [yauaa](https://github.com/nielsbasjes/yauaa) user-agent parsing) without slowing the redirect path down.
 - **Expiring links** — URLs carry an expiry timestamp; a scheduled job (`UrlCleanupScheduler`) purges expired links automatically.
 - **Rate limiting** — a request-level filter protects the API from abuse.
 - **Ownership enforcement** — only the creator of a link can view its analytics or delete it.
@@ -54,7 +59,7 @@ This isn't a toy "generate a random string" project — it's built the way a rea
 
 ## Architecture
 
-![Architecture diagram](src/architecture.svg)
+![Architecture diagram](docs/architecture.svg)
 
 - The **frontend** (React + Vite) talks to the API over HTTPS with a JWT bearer token.
 - The **Spring Boot API** validates/authenticates requests (`JwtAuthenticationFilter`, `RateLimitFilter`), and reads/writes URLs through Postgres, using **Redis** as a read-through cache for short-code lookups.
