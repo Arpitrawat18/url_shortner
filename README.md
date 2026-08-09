@@ -79,7 +79,6 @@ and Prometheus/Grafana monitoring.
 
 > The UI covers a landing page, register/login, a "my URLs" dashboard, and a per-link analytics view with charts. Add real screenshots or a short GIF here once you run the app locally — this section is deliberately left as a template:
 > ```md
-## Screenshots
 ### Landing Page
 >![Landing_Page](docs/landing_page.png)
 ### Dashboard
