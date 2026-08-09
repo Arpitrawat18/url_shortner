@@ -54,7 +54,7 @@ This isn't a toy "generate a random string" project — it's built the way a rea
 
 ## Architecture
 
-![Architecture diagram](docs/architecture.svg)
+![Architecture diagram](src/architecture.svg)
 
 - The **frontend** (React + Vite) talks to the API over HTTPS with a JWT bearer token.
 - The **Spring Boot API** validates/authenticates requests (`JwtAuthenticationFilter`, `RateLimitFilter`), and reads/writes URLs through Postgres, using **Redis** as a read-through cache for short-code lookups.
