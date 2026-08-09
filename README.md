@@ -1,4 +1,4 @@
-# 🔗 URL Shortener
+# 🔗 Link Compressor
 
 A production-style, full-stack URL shortener with user accounts, click analytics, caching, async event processing, and monitoring — built with **Spring Boot 3 / Java 21** on the backend and **React + TypeScript (Vite)** on the frontend.
 
@@ -79,17 +79,15 @@ and Prometheus/Grafana monitoring.
 
 > The UI covers a landing page, register/login, a "my URLs" dashboard, and a per-link analytics view with charts. Add real screenshots or a short GIF here once you run the app locally — this section is deliberately left as a template:
 ### Landing Page
->![Landing_Page](docs/landing_page.png)
+![Landing_Page](docs/landing_page.png)
 ### Dashboard
->![Dashboard](docs/dashboard.png)
+![Dashboard](docs/dashboard.png)
 ### My URLs
->![My URLs](docs/my-url.png)
+![My URLs](docs/my-url.png)
 ### Analytics
->![Analytics](docs/analytics.png)
+![Analytics](docs/analytics.png)
 ### Profile
->![Profile](docs/profile.png)
-
-> Easiest way to capture them: run `docker compose up` + `cd frontend && npm run dev`, click through the app in your browser, and save screenshots (or a screen recording converted to GIF, e.g. with [Gifski](https://gif.ski/) or `ffmpeg`) into `docs/screenshots/`.
+![Profile](docs/profile.png)
 
 ## Getting Started
 
@@ -108,7 +106,7 @@ cp .env.example .env
 # edit .env and set POSTGRES_PASSWORD and JWT_SECRET (>= 32 random bytes)
 
 # the app image expects a prebuilt jar, so build it first
-./mvnw clean package -DskipTests
+./mvnw clean package 
 
 docker compose up --build
 ```
