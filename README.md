@@ -83,7 +83,7 @@ and Prometheus/Grafana monitoring.
 ### Dashboard
 ![Dashboard](docs/dashboard.png)
 ### My URLs
-![My URLs](docs/my-url.png)
+![My URLs](docs/my_url.png)
 ### Analytics
 ![Analytics](docs/analytics.png)
 ### Profile
